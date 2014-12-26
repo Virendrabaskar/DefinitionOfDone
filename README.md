@@ -1,7 +1,8 @@
 DefinitionOfDone
 ================
 
-Agile based Software Development . CheckLists for DOD
+Agile based Software Development.
+CheckLists for DOD developed using Backbone JS
 
 Demo at 
 
