@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Definition of Done</title>
+    </head>
+
+    <body>
+        <script src="js/json2.js"></script>
+        <script src="js/jquery.js"></script>
+        <script src="js/underscore.js"></script>
+        <script src="js/backbone.js"></script>
+        <script src="js/backbone.localStorage.js"></script>
+        <link rel="stylesheet" href="css/dod.css"/>
+        <script src="js/dod_model.js"></script>
+        <script src="js/dod_view.js"></script>
+
+        <script type="text/template" id="list-template">
+            <% _.each( task_dod ,function(status,list){ %>
+                <li> 
+                <input id="check-list" name="<%= list %>" type="checkbox" <% if( status ) { %> checked="checked" <% } %> /> 
+                <label id="check-label" <% if( status ) { %> class="strike" <% } %>> <%= list %> </label>
+                <a id="clear" name="<%= list %>" class="cross" ></a>
+                </li>
+           <% });  %>
+        </script>
+
+        <div id="content" class="task-view">
+            <h2>Definition of Done</h2>
+            <div id="task-name">
+                <input type="text" name="task_name"  placeholder="Task title"/>
+                <h3></h3>
+            </div>
+            <div id="check-lists" class="list-view">
+                <input type="text"  placeholder="Add sub task to be done"/>
+                <div class="error">Special characters and multiple spaces are not allowed.<br>Characters should be less than 30</div>
+                <ul>
+                </ul>
+            </div>
+        </div>
+    </body>
+
+</html>

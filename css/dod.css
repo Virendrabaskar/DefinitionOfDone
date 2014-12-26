@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 125%;
+    line-height: 1.4em;
+    background: #eeeee;
+    margin: 0 auto;
+
+}
+#content {
+    text-align:center;
+    border: 5px solid;
+    background: #dddddd;
+    padding: 1%;
+    border-radius: 0 0 5px 5px;
+}
+#content input[type="text"] {
+    width: 33%;
+    font-size: 100%;
+    font-family: inherit;
+    line-height: 1.4em;
+    padding: 6px;
+    border: 1px solid #999910;
+}
+#check-list{
+    position: absolute;
+    left: 5%;
+}
+ul {
+    padding: 1%;
+}
+
+li {
+    list-style-type:none;
+    margin: 1%;
+    text-align:left;
+    text-indent:15%;
+    font-size: 24px;
+    border-bottom: 1px solid #cccccc;
+}
+#content li:hover .cross{
+    position: absolute;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    background: url(delete-black.png) no-repeat;
+    background-position-x: 7px;
+    background-position-y: 11px;
+    background-size: 9px;
+}
+
+.strike{
+    text-decoration:line-through;
+}
+.error{
+    color:red;
+}
